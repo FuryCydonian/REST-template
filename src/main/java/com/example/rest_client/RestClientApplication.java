@@ -44,7 +44,7 @@ public class RestClientApplication {
 
         System.out.println("USERS:    " + responseEntity.getBody());
 
-        return responseHeaders;
+        return headers;
     }
 
     public static User saveUserId3(HttpHeaders headers) {
@@ -59,6 +59,8 @@ public class RestClientApplication {
                 String.class);
 
         System.out.println("BODY1:    " + responseEntity.getBody());
+
+        System.out.println(getAllUsersAndSetCookie());
         return newUser;
     }
 
